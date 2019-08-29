@@ -1,0 +1,390 @@
+@import "./_variables.scss";
+
+body {
+     background-color: $bodyBg;
+     -webkit-font-smoothing: antialiased;
+     font: 12px/1.25 PingFangSC-Regular,"Helvetica Neue", "Helvetica","Hiragino Sans GB","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
+     color:#646464;
+}
+
+a{
+  cursor: pointer;
+}
+
+.text-right{
+  text-align: right!important;
+}
+.text-left{
+  text-align: left!important;
+}
+.text-center{
+  text-align: center!important;
+}
+.bold{
+  font-weight: bold!important;
+}
+
+.hand{
+  cursor: pointer;
+}
+
+.red-font{
+  color:#c54736!important;
+}
+.fl{
+  float: left!important;
+}
+.fr{
+  float: right!important;
+}
+.margin-right-15{
+  margin-right: 15px;
+}
+.margin-bottom-20{
+   margin-bottom: 20px;
+ }
+.margin-top-20{
+  margin-top: 20px;
+}
+.flex-row{
+  display: flex;
+  align-items: center;
+}
+
+.pic-max-200 {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.pic-max-400 {
+  max-width: 400px;
+  max-height: 400px;
+}
+.content{
+  height:100%
+}
+.row{
+  display:flex;
+  flex-wrap:wrap;
+}
+.mlabel{
+  font-size:16px;
+  text-align:center;
+  margin-right: 5px;
+}
+.lout{
+  display:flex;
+  align-items:center;
+  margin:10px;
+  margin-left:20px;
+}
+.setwidth{
+  width:220px;
+}
+.el-select-dropdown__item{
+  width:215px;
+  text-align:center;
+  span{
+      max-width:100%
+  }
+}
+.el-table .cell{
+  display:flex;
+  justify-content:center;
+}
+.pagination{
+  width:100%;
+  text-align:center
+}
+.thupnum{
+  width:70px !important;
+}
+.selmlabel{
+   margin-left:5px
+}
+.searchimg{
+  border-bottom:1px solid #ebeef5;
+  padding-bottom:10px;
+  margin-bottom:10px;
+}
+.serachbar{
+  .el-button:nth-child(2){
+      margin-left:10px;
+      margin-right:30px;
+  }
+  .serachLabel{
+      width:265px;
+  }
+}
+.kselected{
+  margin-left:10px;
+}
+.block-content{
+  text-align:center;
+  .img{
+      width:80px;
+      height: 80px;
+      position:relative;
+      &:hover{
+              cursor:pointer;
+          }
+      &:before{
+           width:0;
+          border-width:20px;
+          border-style:solid;
+          border-color: transparent  transparent #333333 transparent;
+          position: absolute;
+          right: -20px;
+          top: -20px;
+          content: "";
+          transform: rotate(45deg);
+      }
+      span{
+          position:absolute;
+          right:0;
+          top:0;
+          color:#fff;
+          padding:0 2px;
+          
+      }
+  }
+}
+.imgswiper{
+  position:fixed;
+  top:0;
+  height:100%;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  z-index:9000;
+  .swiperselected{
+    position:absolute;
+    bottom:20px;
+    z-index:9999;
+    .isselected:first-child{
+      margin-right: 10px;
+    }
+    .isselected{
+        font-size:20px;
+        padding:10px 40px;
+        border-radius:4px;
+        background:#fff;
+        border:1px solid #fff;
+        &:focus{
+            outline:none;
+        }
+        &:hover{
+            background:#ecf5ff;
+            color:#409EFF;
+            border:1px solid #409EFF;
+        }
+    }
+  }
+  .swiperclose{
+      position:absolute;
+      right:10px;
+      top:10px;
+      z-index:9999;
+      color:#fff;
+      .fa-close{
+          padding:20px 20px 0 0;
+          &:before{
+              font-size:40px;
+          }
+          &:hover{
+              cursor:pointer;
+          }
+      }
+  }
+  .swiper-pagination{
+      bottom:100px !important;
+  }
+  .swiper-pagination-bullet{
+      width:15px;
+      height:15px;
+  }
+  .swiper-slide{
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      z-index:2
+  }
+  .swiper-container {
+      z-index:9998;
+      background:rgba(9,9,9,0.5);
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      img{
+          margin:90px 0;
+          max-height:75%;
+          max-width: 90%;
+      }
+  }
+  .swiper-button-prev{
+      margin-left:20px;
+  }
+  .swiper-button-next{
+      margin-right:20px;
+  }
+}
+
+.block{
+  padding-bottom: 20px;
+  h2{
+      padding:30px 40px 0;
+      margin:10px 20px 0;
+      font-size: 20px;
+  }
+  .row{
+      margin:10px;
+      display:flex;
+      align-items:center;
+      .reqnum{
+          width:100px;
+          margin-left: 10px;
+      }
+      .namelabel{
+          width: 160px;
+          text-align: right;
+          font-size:16px;
+          margin: 0;
+          text-align: right;
+      }
+      .contentlabel{
+          font-size:16px;
+          margin-left:10px;
+      }
+      .timelabel{
+          font-size:16px;
+          margin:0 10px;
+      }
+      .confedit{
+          margin:20px 0 0 30px;
+      }
+  }
+  .importgc{
+      margin-left:20px;
+  }
+  .el-table .success-row {
+    background: #f0f9eb;
+  }
+}
+.titlelabel{
+  font-size:20px;
+  margin-bottom: 20px;
+}
+.ticketId{
+  width:250px !important;
+}
+.block{
+  padding-top:30px;
+}
+.row{
+  .el-date-editor{
+      width:450px;
+  }
+}
+.file {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  padding: 12px 20px;
+  overflow: hidden;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+  border-radius: 4px;
+  color: #606266;
+  font-size: 13px;
+  input{
+      position: absolute;
+      font-size: 100px;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      &:hover{
+          cursor:pointer;
+      }
+  }
+  &:hover{
+      background:rgb(236,245,255);
+      color:rgb(70,160,252);
+  }
+}
+.condition{
+  align-items: flex-start !important;
+  .sendcdn{
+      margin-top:18px;
+  }
+}
+.confticketId{
+  margin-left:20px !important; 
+}
+.block{
+  padding-top:30px;
+}
+.row{
+  .el-date-editor{
+      width:450px;
+  }
+}
+.sortic{
+  &:hover{
+      cursor:pointer;
+  }
+}
+.slogoncontent{
+  width:250px !important;
+}
+.searchuser{
+  padding-left:30px;
+}
+.imgsblock{
+  padding:30px 0 10px;
+  margin:0 30px;
+  border-bottom:1px solid #ddd;
+  .time{
+      font-size:25px;
+      line-height:30px;
+      padding-bottom:10px;
+      margin-left:10px;
+  }
+  img{
+      width:300px;
+      height: 500px;
+      padding:20px 10px;
+      margin-right:10px;
+  }
+}
+.nothingtip{
+  text-align:center;
+  font-size:24px;
+  font-weight:500;
+}
+.ticketId{
+  width:250px;
+}
+.block{
+  padding-top:30px;
+}
+.row{
+  .el-date-editor{
+      width:450px;
+  }
+}
+.sortic{
+  &:hover{
+      cursor:pointer;
+  }
+}
+.slogoncontent{
+  width:250px;
+}
+.newslogon{
+  margin-left:30px
+}
